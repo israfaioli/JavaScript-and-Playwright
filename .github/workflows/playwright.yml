@@ -20,7 +20,7 @@ jobs:
 
       - name: Instalar Playwright
         run: |
-          npm install -g playwright@1.17.123
+          npm install -g playwright@1.38.0
 
       - name: Instalar dependências
         run: |
