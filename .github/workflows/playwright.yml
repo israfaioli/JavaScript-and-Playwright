@@ -29,3 +29,9 @@ jobs:
       - name: Executar testes Playwright
         run: |
           npm run test-headless
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: index.html
+          path: playwright-report/
+          retention-days: 30      
