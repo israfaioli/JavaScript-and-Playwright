@@ -3,7 +3,7 @@ name: Playwright Test
 on:
   push:
     branches:
-      - main  # Mude para a branch principal do seu projeto ou o nome correto
+      - main 
 
 jobs:
   build:
@@ -11,12 +11,12 @@ jobs:
 
     steps:
       - name: Checkout código-fonte
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Configurar Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: 14  # Escolha a versão do Node.js que você deseja
+          node-version: 16 
 
       - name: Instalar Playwright
         run: |
@@ -31,7 +31,7 @@ jobs:
           npm run test-headless
 
       - name: Fazer upload do relatório Playwright
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: playwright-report
           path: playwright-report/
