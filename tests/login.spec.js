@@ -10,7 +10,7 @@ test("Test 01 - Login at automation practice", async ({ page }) => {
     const expectedUserName = 'automation14'
 
     await myAccountPage.goToMyAccountPage()
-    await myAccountPage.fillAccountLogin(accountData)
+    await myAccountPage.fillAccountLogin(accountData.email, accountData.password)
     await menuPage.checkSuccessfullLogin(expectedUserName)
 })
 

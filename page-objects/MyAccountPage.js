@@ -17,11 +17,11 @@ export class MyAccountPage {
         await this.page.waitForURL("/my-account/")
     }
 
-    fillAccountLogin = async (accountData) => {
+    fillAccountLogin = async (email, password) => {
         await this.emailInput.waitFor()
-        await this.emailInput.fill(accountData.email)
+        await this.emailInput.fill(email)
         await this.passwordInput.waitFor()
-        await this.passwordInput.fill(accountData.password)
+        await this.passwordInput.fill(password)
         await this.loginButton.waitFor()
         await this.loginButton.click()
     }
