@@ -14,7 +14,7 @@ test("Test 01 - Login at automation practice", async ({ page }) => {
     await menuPage.checkSuccessfullLogin(expectedUserName)
 })
 
-test("Register new user at automation practice", async ({ page }) => {
+test("Test 02 - Register new user at automation practice", async ({ page }) => {
     const myAccountPage = new MyAccountPage(page)
     const menuPage = new MenuPage(page)
     const newUserName = uuidv4()
